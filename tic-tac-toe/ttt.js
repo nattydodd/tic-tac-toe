@@ -44,6 +44,9 @@ $(function() {
   //
   // }
   function checkWinner(player) {
+
+    // var leftx = $(".tictactoe").find(".x").toArray();
+
   if ( $('.top').children(player).length === 3 ) {
     alert(player + " won!");
     }
@@ -51,6 +54,15 @@ $(function() {
     alert("winner!");
     }
   else if ( $('.bottom').children(player).length === 3 ) {
+    alert("winner!");
+    }
+  else if ( $(".tictactoe").find('.left' + player).length == 3 ) {
+    alert("winner!");
+    }
+  else if ( $(".tictactoe").find('.center' + player).length == 3 ) {
+    alert("winner!");
+    }
+  else if ( $(".tictactoe").find('.right' + player).length == 3 ) {
     alert("winner!");
     }
   }
