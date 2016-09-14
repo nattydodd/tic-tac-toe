@@ -5,7 +5,8 @@ $(function() {
 
   $('.square').on('click', function() {
     markSquare(this)
-    checkWinner()
+    checkWinner(".x")
+    checkWinner(".o")
   });
 
 
@@ -42,14 +43,14 @@ $(function() {
   //   }
   //
   // }
-  function checkWinner() {
-  if ( $('.top').children('.x').length === 3 ) {
+  function checkWinner(player) {
+  if ( $('.top').children(player).length === 3 ) {
+    alert(player + " won!");
+    }
+  else if ( $('.middle').children(player).length === 3 ) {
     alert("winner!");
     }
-  else if ( $('.middle').children('.x').length === 3 ) {
-    alert("winner!");
-    }
-  else if ( $('.bottom').children('.x').length === 3 ) {
+  else if ( $('.bottom').children(player).length === 3 ) {
     alert("winner!");
     }
   }
