@@ -28,19 +28,34 @@ $(function() {
     } else {
       alert("I'm sorry...try again");
     }
-
-    console.log("Marking Square");
+    // console.log("Marking Square");
   }
 
 
+  // function checkWinner() {
+  //   if ( ( $('.top .left').hasClass("x") && $('.top .center').hasClass("x") && $('.top .right').hasClass("x")) );
+  //   ( ( $('.middle .left').hasClass("x") && $('.middle .center').hasClass("x") && $('.middle .right').hasClass("x")) );
+  //
+  //    {
+  //     alert("winner!");
+  //
+  //   }
+  //
+  // }
   function checkWinner() {
-    if ( $('.top').children().hasClass("x") ) {
-
-      console.log("Checking Winner");
-
+  if ( $('.top').children('.x').length === 3 ) {
+    alert("winner!");
     }
-
+  else if ( $('.middle').children('.x').length === 3 ) {
+    alert("winner!");
+    }
+  else if ( $('.bottom').children('.x').length === 3 ) {
+    alert("winner!");
+    }
   }
+
+
+
 
 
 });
