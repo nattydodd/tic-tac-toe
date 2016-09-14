@@ -4,36 +4,43 @@ $(function() {
   var turn = 0;
 
   $('.square').on('click', function() {
-    var self = $(this);
+    markSquare(this)
+    checkWinner()
+  });
+
+
+  function markSquare(square) {
+
+    var self = $(square);
 
     self.data('position');
     if ( self.text() === '' ) {
       if ( turn  % 2 === 0 ) {
-      self.text('X');
+        self.text('X');
         self.addClass("x");
-    } else {
-      self.text('O');
+      } else {
+        self.text('O');
         self.addClass("o");
-    }
+      }
 
     turn++;
-  } else {
-    alert("I'm sorry...try again");
+
+    } else {
+      alert("I'm sorry...try again");
+    }
+
+    console.log("Marking Square");
   }
-  });
-
-  // $('.square').click( function() { checkWinner()
-  //     var self = $(this);
-  //
-  //     function checkWinner() {
-  //       $('.square').toggleClass('x');
-  //
-  //     }
-  //
-  //
-  // });
 
 
+  function checkWinner() {
+    if ( $('.top').children().hasClass("x") ) {
+
+      console.log("Checking Winner");
+
+    }
+
+  }
 
 
 });
