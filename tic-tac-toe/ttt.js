@@ -33,19 +33,7 @@ $(function() {
   }
 
 
-  // function checkWinner() {
-  //   if ( ( $('.top .left').hasClass("x") && $('.top .center').hasClass("x") && $('.top .right').hasClass("x")) );
-  //   ( ( $('.middle .left').hasClass("x") && $('.middle .center').hasClass("x") && $('.middle .right').hasClass("x")) );
-  //
-  //    {
-  //     alert("winner!");
-  //
-  //   }
-  //
-  // }
   function checkWinner(player) {
-
-    // var leftx = $(".tictactoe").find(".x").toArray();
 
   if ( $('.top').children(player).length === 3 ) {
     alert(player + " won!");
@@ -56,19 +44,22 @@ $(function() {
   else if ( $('.bottom').children(player).length === 3 ) {
     alert("winner!");
     }
-  else if ( $(".tictactoe").find('.left' + player).length == 3 ) {
+  else if ( $('.tictactoe').find('.left' + player).length == 3 ) {
     alert("winner!");
     }
-  else if ( $(".tictactoe").find('.center' + player).length == 3 ) {
+  else if ( $('.tictactoe').find('.center' + player).length == 3 ) {
     alert("winner!");
     }
-  else if ( $(".tictactoe").find('.right' + player).length == 3 ) {
+  else if ( $('.tictactoe').find('.right' + player).length == 3 ) {
+    alert("winner!");
+    }
+  else if ( $('.top .left').is(player) && $('.middle .center').is(player) && $('.bottom .right').is(player) ) {
+    alert("winner!");
+    }
+  else if ( $('.bottom .left').is(player) && $('.middle .center').is(player) && $('.top .right').is(player) ) {
     alert("winner!");
     }
   }
-
-
-
 
 
 });
