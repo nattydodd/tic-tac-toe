@@ -1,10 +1,43 @@
-td {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://aos.iacpublishinglabs.com/question/aq/1400px-788px/distance-shore-international-waters_3aa7af4957e07f56.jpg?domain=cx.aos.ask.com');
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+
+h1 {
+  position:relative;
+  margin-top: 100px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+.square {
   font-family: Baskerville, serif;
-  font-size: 150px;
+  font-size: 60px;
   text-align: center;
   border: 3px solid black;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.tictactoe {
   width: 300px;
   height: 300px;
-  cursor: pointer;
+  margin: auto;
   border-collapse: collapse;
+}
+
+.x {
+  color: red;
 }
