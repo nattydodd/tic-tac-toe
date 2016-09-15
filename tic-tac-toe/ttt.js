@@ -2,6 +2,7 @@
 
 $(function() {
   var turn = 0;
+  var boardClone = $(".tictactoe").clone();
 
   $('.square').on('click', function() {
     markSquare(this)
@@ -36,6 +37,14 @@ $(function() {
     $('.popup').fadeIn();
     $('.play-again').click( function() {
     $('.popup').fadeOut();
+    // board reset
+    $(".tictactoe").replaceWith(boardClone.clone());
+    // reset the clicking function
+      $('.square').on('click', function() {
+        markSquare(this)
+        checkWinner(".x")
+        checkWinner(".o")
+      });
     });
   }
 
