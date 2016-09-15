@@ -50,29 +50,32 @@ $(function() {
 
   function checkWinner(player) {
 
-  if ( $('.top').children(player).length === 3 ) {
-    popUp();
-    }
-  else if ( $('.middle').children(player).length === 3 ) {
-    popUp();
-    }
-  else if ( $('.bottom').children(player).length === 3 ) {
-    popUp();
-    }
-  else if ( $('.tictactoe').find('.left' + player).length == 3 ) {
-    popUp();
-    }
-  else if ( $('.tictactoe').find('.center' + player).length == 3 ) {
-    popUp();
-    }
-  else if ( $('.tictactoe').find('.right' + player).length == 3 ) {
-    popUp();
-    }
-  else if ( $('.top .left').is(player) && $('.middle .center').is(player) && $('.bottom .right').is(player) ) {
-    popUp();
-    }
-  else if ( $('.bottom .left').is(player) && $('.middle .center').is(player) && $('.top .right').is(player) ) {
-    popUp();
+    if ( $('.top').children(player).length === 3 ) {
+      popUp();
+      }
+    else if ( $('.middle').children(player).length === 3 ) {
+      popUp();
+      }
+    else if ( $('.bottom').children(player).length === 3 ) {
+      popUp();
+      }
+    else if ( $('.tictactoe').find('.left' + player).length === 3 ) {
+      popUp();
+      }
+    else if ( $('.tictactoe').find('.center' + player).length === 3 ) {
+      popUp();
+      }
+    else if ( $('.tictactoe').find('.right' + player).length === 3 ) {
+      popUp();
+      }
+    else if ( $('.top .left').is(player) && $('.middle .center').is(player) && $('.bottom .right').is(player) ) {
+      popUp();
+      }
+    else if ( $('.bottom .left').is(player) && $('.middle .center').is(player) && $('.top .right').is(player) ) {
+      popUp();
+      }
+    else if ( $('.tictactoe').find('.x').length + $('.tictactoe').find('.o').length === 9 ) {
+      popUp();
     }
   }
 
