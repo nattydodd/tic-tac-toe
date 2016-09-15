@@ -41,3 +41,51 @@ h1 {
 .x {
   color: red;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.8);
+}
+
+.popup-box {
+  width: 400px;
+  height: 50px;
+  background-color: #C3C9FD;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 300px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.congrats {
+  width: 60%;
+  font-family: 'Lobster', cursive;
+  margin: auto;
+  text-align: right;
+  font-size: 30px;
+  line-height: 50px;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+.play-again {
+  font-family: Baskerville, serif;
+  text-align: center;
+  margin-left: 20px;
+  margin-top: 7px;
+  font-size: 15px;
+  position: relative;
+  display: inline-block;
+  line-height: 30px;
+}

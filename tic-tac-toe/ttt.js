@@ -32,32 +32,38 @@ $(function() {
     // console.log("Marking Square");
   }
 
+  function popUp() {
+    $('.popup').fadeIn();
+    $('.play-again').click( function() {
+    $('.popup').fadeOut();
+    });
+  }
 
   function checkWinner(player) {
 
   if ( $('.top').children(player).length === 3 ) {
-    alert(player + " won!");
+    popUp();
     }
   else if ( $('.middle').children(player).length === 3 ) {
-    alert("winner!");
+    popUp();
     }
   else if ( $('.bottom').children(player).length === 3 ) {
-    alert("winner!");
+    popUp();
     }
   else if ( $('.tictactoe').find('.left' + player).length == 3 ) {
-    alert("winner!");
+    popUp();
     }
   else if ( $('.tictactoe').find('.center' + player).length == 3 ) {
-    alert("winner!");
+    popUp();
     }
   else if ( $('.tictactoe').find('.right' + player).length == 3 ) {
-    alert("winner!");
+    popUp();
     }
   else if ( $('.top .left').is(player) && $('.middle .center').is(player) && $('.bottom .right').is(player) ) {
-    alert("winner!");
+    popUp();
     }
   else if ( $('.bottom .left').is(player) && $('.middle .center').is(player) && $('.top .right').is(player) ) {
-    alert("winner!");
+    popUp();
     }
   }
 
