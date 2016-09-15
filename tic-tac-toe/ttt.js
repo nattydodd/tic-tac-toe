@@ -33,8 +33,9 @@ $(function() {
     // console.log("Marking Square");
   }
 
-  function popUp() {
+  function popUp(text) {
     $('.popup').fadeIn();
+    $('.message').text(text);
     $('.play-again').click( function() {
     $('.popup').fadeOut();
     // board reset
@@ -51,31 +52,31 @@ $(function() {
   function checkWinner(player) {
 
     if ( $('.top').children(player).length === 3 ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.middle').children(player).length === 3 ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.bottom').children(player).length === 3 ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.tictactoe').find('.left' + player).length === 3 ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.tictactoe').find('.center' + player).length === 3 ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.tictactoe').find('.right' + player).length === 3 ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.top .left').is(player) && $('.middle .center').is(player) && $('.bottom .right').is(player) ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.bottom .left').is(player) && $('.middle .center').is(player) && $('.top .right').is(player) ) {
-      popUp();
+      popUp("You Won!");
       }
     else if ( $('.tictactoe').find('.x').length + $('.tictactoe').find('.o').length === 9 ) {
-      popUp();
+      popUp("Draw!");
     }
   }
 
